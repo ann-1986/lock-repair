@@ -52,6 +52,24 @@ body {
     margin-bottom: 40px;
 }
 
+.btn {
+    width: 240px;
+    height: 58px;
+    background: #F2C94C;
+    box-shadow: 0px 4px 15px rgba(52, 45, 45, 0.25);
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: $anim;
+    margin-bottom: 40px;
+
+    &:hover {
+
+    }
+}
+
 .work {
     background-color: #F2F2F2;
     padding: 80px 0 86px;
@@ -135,7 +153,7 @@ body {
     &__list {
         background-image: url('/img/shield.png');
         background-repeat: no-repeat;
-        background-position: right -44px;
+        background-position: right 129px;
     }
 
     &__grid {
@@ -143,20 +161,22 @@ body {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 24px;
     }
 
     &__item {
-        width: 33.3%;
+        width: 31%;
         padding: 12px;
         box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
         border-radius: 8px;
-        min-height: 250px;
+        background-color: #fff;
     }
 
     &__card {
         border: 1px dashed #BDBDBD;
         border-radius: 8px;
         padding: 12px;
+        min-height: 226px;
     }
 
     &__icon {
