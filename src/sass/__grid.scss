@@ -1,0 +1,69 @@
+// Breakpoints
+$bp-larger-than-iphone5     : "min-width: 350px" !default;
+$bp-larger-than-iphone6     : "min-width: 374px" !default;
+$bp-larger-than-mobile      : "min-width: 400px" !default;
+$bp-larger-than-phablet     : "min-width: 550px" !default;
+$bp-larger-than-tablet      : "min-width: 750px" !default;
+$bp-larger-than-desktop     : "min-width: 1000px" !default;
+$bp-larger-than-desktophd   : "min-width: 1200px" !default;
+$bp-larger-than-note        : "min-width: 1360px" !default;
+$bp-larger-than-desktopfullhd   : "min-width: 1520px" !default;
+
+$bp-larger-than-1170 : "min-width: 1170px" !default;
+$bp-larger-than-1250 : "min-width: 1250px" !default;
+$bp-larger-than-1400 : "min-width: 1400px" !default;
+
+//Grid Variables
+$container-width: 1280px !default;
+$container-width-larger-than-mobile: 100% !default;
+$container-width-larger-than-phablet: 80% !default;
+$container-width-larger-than-desktop: 80% !default;
+$container-width-larger-than-1400: 100% !default;
+
+.b-container {
+  position: relative;
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+// For devices larger than 400px
+@media (#{$bp-larger-than-mobile}) {
+  .b-container {
+    width: $container-width-larger-than-mobile;
+    //padding: 0;
+  }
+}
+
+// For devices larger than 550px
+@media (#{$bp-larger-than-phablet}) {
+  .b-container {
+    width: $container-width-larger-than-phablet;
+  }
+}
+
+@media (#{$bp-larger-than-desktop}) {
+  .b-container {
+    width: $container-width-larger-than-desktop;
+    max-width: 1024px;
+  }
+}
+@media (#{$bp-larger-than-1400}) {
+  .b-container {
+    width: $container-width-larger-than-1400;
+    max-width: 1244px;
+  }
+}
+
+// Clearing
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Self Clearing Goodness
+
+.b-container:after{
+  content: "";
+  display: table;
+  clear: both;
+}
