@@ -1,0 +1,16 @@
+.header {
+    &__body {
+        position: relative;
+        display: flex;
+    }
+
+    &__logo {
+        img {
+            height: 125px;
+        }
+    }
+
+    &__advantages {
+        display: flex;
+    }
+}
