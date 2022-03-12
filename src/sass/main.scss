@@ -2,7 +2,7 @@
 @import '../fonts/webfontkit-20220311-034106/stylesheet.scss';
 @import '_grid';
 @import 'sprite';
-@import 'header';
+
 
 $anim: all 0.2s ease 0s;
 $anim5: all 0.5s;
@@ -10,6 +10,8 @@ $animCubic: all 0.5s cubic-bezier(0.3, 0, 0.2, 1);
 $animCubic02: all 0.2s cubic-bezier(0.3, 0, 0.2, 1);
 $red: #E41E38;
 $blue: #0091ff;
+
+@import 'header';
 
 body {
     font-size: 18px;

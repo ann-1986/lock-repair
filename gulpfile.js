@@ -214,7 +214,7 @@ function clean() {
 }
 
 gulp.task('fonts', fonts);
-gulp.task('sprite', sprite);
+gulp.task('sprite', gulp.series(sprite, images));
 gulp.task('images', images);
 gulp.task('html', html);
 gulp.task('styles', styles);
