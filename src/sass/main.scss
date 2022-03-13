@@ -140,6 +140,19 @@ body {
         font-size: 32px;
         line-height: 45px;
         color: #000;
+        position: relative;
+        padding-left: 10px;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #F2C94C;
+        }
     }
 }
 
@@ -153,7 +166,7 @@ body {
     &__list {
         background-image: url('/img/shield.png');
         background-repeat: no-repeat;
-        background-position: right 129px;
+        background-position: right 70%;
     }
 
     &__grid {
@@ -177,6 +190,9 @@ body {
         border-radius: 8px;
         padding: 12px;
         min-height: 226px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     &__icon {
@@ -185,6 +201,9 @@ body {
         border: 1px solid #F2C94C;
         border-radius: 50%;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -220,10 +239,78 @@ body {
         font-size: 14px;
         line-height: 20px;
     }
+}
+
+.program {
+    background: #F2F2F2;
+    padding: 60px 0 0 0;
+    height: 895px;
+
+    &__block {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__right {
+        max-width: 70%;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__list {
+        background-color: #fff;
+        box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
+        border-radius: 8px;
+        padding: 12px;
+        
+    }
+
+    &__inside {
+        border: 1px dashed #BDBDBD;
+        border-radius: 8px;
+        padding: 12px;
+        min-height: 577px;
+    }
+
+    &__lock {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: -100px;
+    }
+
+    &__item {
+        margin-bottom: 32px;
+    }
     
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        
+        span {
+            color: #F2C94C;
+            font-size: 36px;
+            margin-right: 16px;
+        }
+    }
+
 }
 
 .manufacturer {
+    padding: 50px 0;
 
     &__grid {
         display: flex;
@@ -244,5 +331,31 @@ body {
             display: block;
             margin: auto;
         }
+    }
+}
+
+.location {
+    padding: 50px 0;
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 25%;
+        display: flex;
+        //align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__icon {
+        margin-right: 30px;
+    }
+
+    &__city {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.1;
     }
 }
