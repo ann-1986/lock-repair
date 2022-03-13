@@ -60,23 +60,8 @@ $(function() {
     });
 
     // слайдер на главной
-    initBestSlider();
+    initLeadSlider();
 
-    // слайдер Инстаграм на главной
-    initInstagramSlider();
-
-    // слайдер Наши клиенты
-    initClientSlider();
-
-    // слайдер Новости
-    initNewsSlider();
-
-    // слайдер Статьи
-    initArticlesSlider();
-
-    // слайдер категорий в мобильном меню
-    initMobileCategoryMenu();
-    
     initXtab();
     /*
     toogler({
@@ -180,115 +165,19 @@ var initMobileCategoryMenu = function() {
     })
 }
 
-var initBestSlider = function() {
-    $('.best-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        fade: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-    });
-};
+var initLeadSlider = function() {
+    var selector = '.lead-slider-js';
 
-var initClientSlider = function() {
-    $('.client-slider').slick({
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        infinite: true,
-        responsive: [
-            {
-                breakpoint: 400,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            },
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 5,
-                }
-            },
-            {
-                breakpoint: 2000,
-                settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 6,
-                }
+    $(selector).owlCarousel({
+        loop: true,
+        margin: 0,
+        responsiveClass: true,
+        responsive:{
+            0:{
+                items: 1,
+                nav: true
             }
-        ]
-    });
-};
-
-var initInstagramSlider = function() {
-    $('.instagram-slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 420,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }
-        ]
-    });
-};
-
-var initNewsSlider = function() {
-    $('.news-slider-js').slick({
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        arrows: false,
-        dots: true,
-        responsive: [
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-};
-
-var initArticlesSlider = function() {
-    $('.articles-slider-js').slick({
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        arrows: false,
-        dots: true,
-        responsive: [
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
+        }
     });
 };
 
