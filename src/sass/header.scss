@@ -21,7 +21,7 @@ $yellow: #F2C94C;
 
         .header-advantages-card {
             background: #FFFFFF;
-            box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
+            box-shadow: 0 10px 15px rgba(189, 184, 184, 0.25);
             border-radius: 8px;
             padding: 3.73px;
             flex-shrink: 0;
@@ -177,17 +177,25 @@ $yellow: #F2C94C;
       position: relative;
       width: 11px;
     }
-  }
+}
+
+.section-lead {
+    padding: 32px 0 120px;
+}
 
 .lead-slider {
+    padding: 40px 0 57px;
+
     &__item {
         background-repeat: no-repeat;
-        background-position: center right;
+        background-position: 97% center;
+        padding: 0 72px;
     }
 
     &__panel {
         max-width: 800px;
         min-height: 434px;
+        padding-top: 52px;
     }
 
     &__text {
@@ -228,19 +236,12 @@ $yellow: #F2C94C;
         font-size: 14px;
         font-weight: 500;
     }
-}
-
-.lead-slider {
-    padding: 40px 0;
-
-    &__item {
-        padding: 0 64px;
-    }
 
     .owl-dots {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 50px;
     }
 
     .owl-dot {
@@ -265,6 +266,8 @@ $yellow: #F2C94C;
 
         &.active {
             border-radius: 50%;
+            margin-right: 6px;
+            margin-left: 6px;
 
             span {
                 width: 16px;
@@ -292,7 +295,7 @@ $yellow: #F2C94C;
         position: absolute;
         top: 50%;
         width: 100%;
-        margin-top: -20px;
+        margin-top: -75px;
 
         button {
             width: 40px;
@@ -322,6 +325,7 @@ $yellow: #F2C94C;
                 width: 7px;
                 height: 21px;
                 display: inline-block;
+                margin-right: 3px;
             }
         }
 
@@ -338,18 +342,50 @@ $yellow: #F2C94C;
                 width: 7px;
                 height: 21px;
                 display: inline-block;
+                margin-left: 3px;
             }
         }
     }
 }
 
+.lead-advantages {
+    &__grid {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1414px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 33.33%;
+    }
+}
+
 .lead-advantages-card {
+    display: flex;
+    max-width: 415px;
+    flex-shrink: 0;
+
     &__icon {
-        svg {
-            border: 1px solid red;
-            width: 40px;
-            height: 40px;
-            fill: red;
-        }
+        border: 1px solid $yellow;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 24px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-size: 18px;
     }
 }
