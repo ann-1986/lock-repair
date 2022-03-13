@@ -1,0 +1,355 @@
+$yellow: #F2C94C;
+
+.header {
+    &__body {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__logo {
+        img {
+            height: 125px;
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        padding-top: 16px;
+        width: 100%;
+        justify-content: center;
+
+        .header-advantages-card {
+            background: #FFFFFF;
+            box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
+            border-radius: 8px;
+            padding: 3.73px;
+            flex-shrink: 0;
+            margin-left: 16px;
+            margin-right: 16px;
+
+            &__wrapper {
+                padding: 8px 12px 8px 12px;
+                border: 1px dashed #BDBDBD;
+                border-radius: 8px;
+                min-width: 152px;
+            }
+
+            &__title {
+                font-size: 28px;
+                font-weight: 500;
+                margin-bottom: 3px;
+            }
+
+            &__info {
+                font-size: 12px;
+                line-height: 1.167;
+            }
+        }
+    }
+    &__contacts {
+        padding: 40px 20px 3px;
+
+        .header-social {
+            display: flex;
+
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                border: 1px solid $yellow;
+                border-radius: 50%;
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+                justify-content: center;
+                margin-right: 16px;
+                transition: $anim;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: $yellow;
+                }
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }            
+        }
+
+        .header-phone {
+            font-weight: 500;
+            margin-bottom: 16px;
+    
+            &__number {
+                font-size: 30px;
+                line-height: 1.1;
+    
+                a {
+                    color: #000;
+                    text-decoration: none;
+        
+                    &:hover {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                }
+            }
+    
+            &__hint {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__callback {
+        width: 168px;
+        flex-shrink: 0;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    &__burger {
+        width: 73px;
+        flex-shrink: 0;
+    }
+}
+
+.header-callback {
+    &__button {
+        .btn {
+            font-size: 16px;
+            height: 55px;
+        }
+    }
+    
+    &__hint {
+        margin-top: 12px;
+        font-weight: 500;
+        font-size: 10px;
+    }
+}
+
+.burger {
+    //height: 56px;
+    width: 52px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-top: 28px;
+
+    &:hover {
+        span {
+            width: 100%;
+        }
+    }
+
+    span{
+      height: 4px;
+      //width: 100%;
+      display: block;
+      background: #000;
+      transition: $anim;
+    }
+
+    &__line-one{
+      transition: $anim;
+      position: relative;
+      width: 32px;
+      display: inline-block;
+      background: #000;
+    }
+
+    &__line-two{
+      margin: 3px 0;
+      transition: $anim;
+      position: relative;
+      opacity: 1;
+      width: 20px;
+    }
+
+    &__line-three{
+      transition: $anim5;
+      position: relative;
+      width: 11px;
+    }
+  }
+
+.lead-slider {
+    &__item {
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+
+    &__panel {
+        max-width: 800px;
+        min-height: 434px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    &__header {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.6;
+        min-height: 260px;
+
+        span {
+            color: $yellow;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__button {
+        margin-right: 24px;
+
+        .btn {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.1;
+            max-width: none;
+        }
+    }
+
+    &__hint {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.lead-slider {
+    padding: 40px 0;
+
+    &__item {
+        padding: 0 64px;
+    }
+
+    .owl-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .owl-dot {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        position: relative;
+        transition: $animCubic02;
+
+        span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #979797;
+            border-radius: 50%;
+            margin-left: 6px;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+
+        &.active {
+            border-radius: 50%;
+
+            span {
+                width: 16px;
+                height: 16px;
+                background-color: $yellow;
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                border: 1px solid $yellow;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .owl-nav {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: -20px;
+
+        button {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 215, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: $anim;
+
+            &:hover {
+                background-color: $yellow;
+            }
+        }
+
+        button.owl-prev {
+            background-color: rgba(255, 215, 0, 0.4);
+
+            &:hover {
+                background-color: $yellow;
+            }
+
+            span {
+                font-size: 0;
+                background: transparent url('/img/owl-prev.svg') center center no-repeat;
+                width: 7px;
+                height: 21px;
+                display: inline-block;
+            }
+        }
+
+        button.owl-next {
+            background-color: rgba(255, 215, 0, 0.4);
+
+            &:hover {
+                background-color: $yellow;
+            }
+
+            span {
+                font-size: 0;
+                background: transparent url('/img/owl-next.svg') center center no-repeat;
+                width: 7px;
+                height: 21px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.lead-advantages-card {
+    &__icon {
+        svg {
+            border: 1px solid red;
+            width: 40px;
+            height: 40px;
+            fill: red;
+        }
+    }
+}
