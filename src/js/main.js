@@ -63,6 +63,13 @@ $(function() {
     initLeadSlider();
 
     initXtab();
+    toogler({
+        "parent": ".price__item",
+        "hiddenContainer": ".price__list",
+        "link": ".price__title",
+        "speed": 100,
+        "openClass": "active"
+    });
     /*
     toogler({
         "parent": ".footer-block",
