@@ -3,3 +3,4 @@ __MACOSX/
 build/
 .idea/
 .DS_Store
+src/img/sprite.svg
