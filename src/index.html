@@ -76,7 +76,7 @@
                 </div>
                 <div class="header__callback header-callback">
                     <div class="header-callback__button">
-                        <a href="#" class="btn">Вызвать мастера</a>
+                        <a href="#callback-form" class="btn" data-fancybox>Вызвать мастера</a>
                     </div>
                     <div class="header-callback__hint">
                         Через 60 минут будем у Вас!
@@ -1141,9 +1141,86 @@
     </main>
     <footer class="footer">
         <div class="b-container">
-            <div class="footer__body">Footer</div>
+            <div class="footer__body">
+                <div class="footer__top">
+                    <div class="footer__logo">
+                        <a href="/"><img src="img/footer-logo.svg" alt="" /></a>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer-phone">
+                            <div class="footer-phone__number">
+                                <a href="tel:">8-495-744-77-33</a>
+                            </div>
+                            <div class="footer-phone__hint">
+                                Круглосуточно. Москва и область
+                            </div>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon">
+                                <svg><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg><use xlink:href="img/sprite.svg#icon-telegram"></use></svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg><use xlink:href="img/sprite.svg#icon-whatsapp"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__menu">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Наши мастера</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Цены</a></li>
+                        <li><a href="#">Ответы на вопросы</a></li>
+                        <li><a href="#">Полезные советы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__company">
+                        ИП Язиков С.А.
+                    </div>
+                    <div class="footer__social"></div>
+                    <div class="footer__copyright">
+                        © 2004-2022. Все права защищены.
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="/js/all.js?v=7"></script>
+    <div style="display: none;">
+        <div id="callback-form" class="callback-form">
+            <div class="callback-form__wrapper">
+                <div class="callback-form__title">
+                    Вызвать мастера
+                </div>
+                <div class="callback-form__lead">
+                    Оставте свои данные<br />
+                    и получите бесплатную консультацию!
+                </div>
+                <div class="callback-form__body">
+                    <div class="callback-form__item">
+                        <label class="callback-form__label">Ваше имя</label>
+                        <input type="text" placeholder="Иван Иванов" name="name"/>
+                    </div>
+                    <div class="callback-form__item">
+                        <label class="callback-form__label">Ваш телефон</label>
+                        <input type="text" name="phone" placeholder="+7 (xxx) xxx-xx-xx" data-mask="+7 (999) 999-99-99" />
+                    </div>
+                    <div class="callback-form__submit">
+                        <button class="btn">Перезвоните мне</button>
+                    </div>
+                    <div class="callback-form__privacy">
+                        После нажатия вы подтверждаете согласие на<br /> обработку <a href="#">персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

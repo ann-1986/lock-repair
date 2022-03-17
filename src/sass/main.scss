@@ -2,8 +2,11 @@
 @import '../fonts/webfontkit-20220311-034106/stylesheet.scss';
 @import '_grid';
 @import 'sprite';
+@import 'popups';
 @import '../vendor/owlcarousel/owl.carousel.scss';
 @import '../vendor/owlcarousel/owl.theme.default.scss';
+
+@import '../vendor/fancybox/jquery.fancybox.min';
 
 
 $anim: all 0.2s ease 0s;
