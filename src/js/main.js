@@ -79,6 +79,13 @@ $(function() {
     });
     */
 
+    toogler({
+        "parent": "li",
+        "hiddenContainer": "ul",
+        "link": ".slide-menu__arrow",
+        "speed": 100,
+    });
+
     //плавный переход по контенту
     $('body').on('click', '[data-goto]', function(e) {
         e.preventDefault();
@@ -215,8 +222,8 @@ var toogler = function(ops) {
         }
 
         var classOpened = options.openClass || "open";
-        var parent = $(this).parents(options.parent);
-        var body = parent.find(options.hiddenContainer);
+        var parent = $(this).closest(options.parent);
+        var body = parent.find(options.hiddenContainer).eq(0);
         var opened = parent.hasClass(classOpened);
 
         var v_up = 0;  
