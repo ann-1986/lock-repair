@@ -47,6 +47,13 @@ body {
     max-width: 1470px;
 }
 
+h2 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 51px;
+    color: #000;
+}
+
 h3 {
     font-weight: 500;
     font-size: 24px;
@@ -259,9 +266,9 @@ h3 {
     }
 
     &__item {
-        width: 280px;
-        margin-bottom: 25px;
-        margin-right: -19px;
+        width: 25%;
+        margin-bottom: 40px;
+        //margin-right: -19px;
     }
 
     &__foto {
@@ -723,11 +730,244 @@ h3 {
 }
 
 .info {
-    &__list{
-      
-    }
-     
+
     &__about {
         margin-bottom: 40px;
+    }
+}
+
+.list-header {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.section-staff {
+    padding: 0 0 100px 0;
+}
+
+.staff-page {
+    padding: 68px 0 88px;
+
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 65px 0 4px;
+    }
+
+    &__item {
+        width: 25%;
+        margin-bottom: 40px;
+        //margin-right: -19px;
+    }
+
+    &__foto {
+        overflow: hidden;
+        height: 240px;
+        margin-bottom: 23px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    &__experience {
+        font-weight: 250;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__text {
+        max-width: 1220px;
+        margin-bottom: 36px;
+    }
+
+    &__information {
+        max-width: 900px;
+        //overflow: hidden;
+
+        img {
+            //width: 100%;
+            margin-bottom: 4px;
+        }
+    }
+    &__list {
+        padding-left: 27px;
+        margin: 0;
+        
+        li {
+            margin-bottom: -2px;
+        }
+    }
+}
+
+.section-faq {
+    padding: 5px 0 50px;
+}
+
+.faq {
+    &__block {
+        background: #FFF;
+        box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
+        border-radius: 8px;
+        padding: 14px;
+        margin-bottom: 24px;
+    }
+
+    &__wrapper {
+        border: 1px dashed #BDBDBD;
+        border-radius: 8px;
+        padding: 16px 0;
+    }
+
+    &__item {
+        padding: 20px;
+
+        &:nth-child(even) {
+            background: #F8F8F8;
+        }
+
+        
+        &.active {
+            .faq {
+                &____answer {
+                    display: block;
+                }
+
+                &__arrow {
+                    &.plus {
+                        opacity: 0;
+                    }
+        
+                    &.minus {
+                        opacity: 1;
+                    }
+                }
+            } 
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 34px;
+        color: #000;
+        padding: 0 20px 4px 30px;
+        position: relative;
+        display: block;
+
+        &:hover {
+            text-decoration: none;
+            color: #000;
+        }
+
+        &:focus {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    &__arrow {
+        content: "";
+        display: block;
+        width: 16px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent url('img/svg/plus.svg') center center no-repeat;
+        transition: $anim;
+
+        &.plus {
+            opacity: 1;
+        }
+
+        &.minus {
+            opacity: 0;
+        }
+    }
+
+    &__answer {
+        font-weight: 250;
+        font-size: 18px;
+        line-height: 25px;
+        color: #000;
+        display: none;
+    }
+}
+
+.section-installation {
+    padding: 20px 0 50px;
+}
+
+.installation {
+    &__body {
+        display: flex;
+    }
+
+    &__image {
+        background-image: url('/img/installation.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        top: 0;
+        width: 50%;
+        margin-right: 38px;
+    }
+
+    &__info {
+        width: 50%;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #000;
+        margin-bottom: 16px;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 45px;
+        color: #000;
+        margin-bottom: 35px;
+    }
+
+    &__order {
+        display: flex;
+    }
+
+    &__btn {
+        margin-right: 24px;
+
+        .btn {
+            width: 174px;
+        }
+    }
+
+    &__caption {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.other-services {
+    &__header{
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 45px;
+        color: #000;
+        margin-top: 50px;
+        margin-bottom: 36px;
     }
 }

@@ -70,6 +70,13 @@ $(function() {
         "speed": 100,
         "openClass": "active"
     });
+    toogler({
+        "parent": ".faq__item",
+        "hiddenContainer": ".faq__answer",
+        "link": ".faq__title",
+        "speed": 100,
+        "openClass": "active"
+    });
     /*
     toogler({
         "parent": ".footer-block",
