@@ -1,106 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/app.css" />
-</head>
-<body>
-    <header class="header">
-        <div class="b-container">
-            <div class="header__body">
-                <div class="header__burger">
-                    <a href="#" class="burger toggle-menu-js">
-                        <span class="burger__line-one"></span>
-                        <span class="burger__line-two"></span>
-                        <span class="burger__line-three"></span>
-                    </a>
-                </div>
-                <div class="header__logo">
-                    <a href="/"><img src="img/logo.svg" alt="" /></a>
-                </div>
-                <div class="header__advantages">
-                    <div class="header-advantages-card">
-                        <div class="header-advantages-card__wrapper">
-                            <div class="header-advantages-card__title">
-                                Быстро
-                            </div>
-                            <div class="header-advantages-card__info">
-                                до 60 минут
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header-advantages-card">
-                        <div class="header-advantages-card__wrapper">
-                            <div class="header-advantages-card__title">
-                                Дешево
-                            </div>
-                            <div class="header-advantages-card__info">
-                                от 990 руб.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header-advantages-card">
-                        <div class="header-advantages-card__wrapper">
-                            <div class="header-advantages-card__title">
-                                Надежно
-                            </div>
-                            <div class="header-advantages-card__info">
-                                Работаем с 2004 года
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header__contacts">
-                    <div class="header-phone">
-                        <div class="header-phone__number">
-                            <a href="tel:">8-495-744-77-33</a>
-                        </div>
-                        <div class="header-phone__hint">
-                            Круглосуточно. Москва и область
-                        </div>
-                    </div>
-                    <div class="header-social">
-                        <a href="#" class="social-icon">
-                            <svg><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg><use xlink:href="img/sprite.svg#icon-telegram"></use></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg><use xlink:href="img/sprite.svg#icon-whatsapp"></use></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="header__callback header-callback">
-                    <div class="header-callback__button">
-                        <a href="#" class="btn">Вызвать мастера</a>
-                    </div>
-                    <div class="header-callback__hint">
-                        Через 60 минут будем у Вас!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-  <main>
-
-    <nav class="breadcrumbs breadcrumbs--card">
-        <div class="b-container">
-            <ul class="breadcrumb">
-                <li>
-                    <a href="/">Главная</a>
-                </li>
-                <li>
-                    <span>Наши мастера</span>
-                </li>
-            </ul>         	
-        </div>
-    </nav>
-
+<include src="part/header.inc.html" title="Наши мастера"></include>
+<main>
+    <include src="part/breadcrumbs.inc.html" title="Наши мастера"></include>
     <section class="section-staff">
         <div class="b-container">
             <div class="section-headerpage"> 
@@ -275,14 +175,5 @@
             </div>
         </div>
     </section>
-
-  </main>
-  <footer class="footer">
-    <div class="b-container">
-        <div class="footer__body">Footer</div>
-    </div>
-  </footer>
-<script src="/js/all.js?v=7"></script>
-</body>
-</html>
-      
+</main>
+<include src="part/footer.inc.html"></include>
