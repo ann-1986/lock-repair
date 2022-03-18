@@ -2,12 +2,9 @@
 @import '../fonts/webfontkit-20220311-034106/stylesheet.scss';
 @import '_grid';
 @import 'sprite';
-@import 'popups';
 @import '../vendor/owlcarousel/owl.carousel.scss';
 @import '../vendor/owlcarousel/owl.theme.default.scss';
-
 @import '../vendor/fancybox/jquery.fancybox.min';
-
 
 $anim: all 0.2s ease 0s;
 $anim5: all 0.5s;
@@ -16,6 +13,7 @@ $animCubic02: all 0.2s cubic-bezier(0.3, 0, 0.2, 1);
 $red: #E41E38;
 $blue: #0091ff;
 
+@import 'popups';
 @import 'header';
 
 body {
