@@ -16,7 +16,7 @@
                         </div>
                         <div class="lead-slider__actions">
                             <div class="lead-slider__button">
-                                <a href="#" class="btn">Рассчитать стоимость вскрытия замка</a>
+                                <a href="#callback-form" class="btn" data-fancybox>Рассчитать стоимость вскрытия замка</a>
                             </div>
                             <div class="lead-slider__hint">
                                 Перезвоним за 59 секунд<br />
@@ -913,6 +913,41 @@
         </div>
     </section>
 
+    <section class="section-map">
+        <div id="map"></div>
+        <div class="b-container">
+            <div class="section-map__body">
+                <div class="contact-form">
+                    <div class="contact-form__wrapper">
+                        <div class="contact-form__title">
+                            Остались вопросы ?
+                        </div>
+                        <div class="contact-form__lead">
+                            Оставте свои данные<br />
+                            и получите бесплатную консультацию!
+                        </div>
+                        <div class="contact-form__body">
+                            <div class="contact-form__item">
+                                <label class="contact-form__label">Ваше имя</label>
+                                <input type="text" placeholder="Иван Иванов" name="name"/>
+                            </div>
+                            <div class="contact-form__item">
+                                <label class="contact-form__label">Ваш телефон</label>
+                                <input type="text" name="phone" placeholder="+7 (xxx) xxx-xx-xx" data-mask="+7 (999) 999-99-99" />
+                            </div>
+                            <div class="contact-form__submit">
+                                <button class="btn">Перезвоните мне</button>
+                            </div>
+                            <div class="contact-form__privacy">
+                                После нажатия вы подтверждаете согласие на<br /> обработку <a href="#">персональных данных</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-contact">
         <div class="b-container">
             <div class="section-header">
@@ -927,57 +962,65 @@
             <div class="contact__grid">
                 <div class="contact__item">
                     <div class="contact__card">
-                        <div class="contact__icon">
-                            <img src="img/svg/phone.svg">
-                        </div>
-                        <div class="contact__name">
-                            Номера Телефонов
-                        </div>
-                        <div class="contact__text">
-                            8-495-744-77-33 <br />
-                            8-495-744-77-33
-                        </div>
-                    </div>
-                </div>
-                <div class="contact__item">
-                    <div class="contact__card">
-                        <div class="contact__icon">
-                            <img src="img/svg/location.svg">
-                        </div>
-                        <div class="contact__name">
-                            Адрес офиса
-                        </div>
-                        <div class="contact__text">
-                            г. Москва, Литовский бульвар, д. 34
+                        <div class="contact__wrapper">
+                            <div class="contact__icon">
+                                <img src="img/svg/phone.svg">
+                            </div>
+                            <div class="contact__name">
+                                Номера Телефонов
+                            </div>
+                            <div class="contact__text">
+                                8-495-744-77-33 <br />
+                                8-495-744-77-33
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact__item">
                     <div class="contact__card">
-                        <div class="contact__icon">
-                            <img src="img/svg/mail.svg">
+                        <div class="contact__wrapper">
+                            <div class="contact__icon">
+                                <img src="img/svg/location.svg">
+                            </div>
+                            <div class="contact__name">
+                                Адрес офиса
+                            </div>
+                            <div class="contact__text">
+                                г. Москва, Литовский бульвар, д. 34
+                            </div>
                         </div>
-                        <div class="contact__name">
-                            Электронная почта
-                        </div>
-                        <div class="contact__mailtext">
-                            secretary@zamkiexpress.ru - <span>сотрудничество, оптовые заказы, резюме по
-                                вакансии</span> <br />
-                            support@zamkiexpress.ru - <span>жалобы, предложения, решение конфликтных
-                            ситуаций, сбои работы сайта, др. вопросы</span>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__card contact__card--emails">
+                        <div class="contact__wrapper">
+                            <div class="contact__icon">
+                                <img src="img/svg/mail.svg">
+                            </div>
+                            <div class="contact__name">
+                                Электронная почта
+                            </div>
+                            <div class="contact__text">
+                                secretary@zamkiexpress.ru - <span>сотрудничество, оптовые заказы, резюме по
+                                    вакансии</span> <br /> <br />
+                                support@zamkiexpress.ru - <span>жалобы, предложения, решение конфликтных
+                                ситуаций, сбои работы сайта, др. вопросы</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact__item">
                     <div class="contact__card">
-                        <div class="contact__icon">
-                            <img src="img/svg/clock.svg">
-                        </div>
-                        <div class="contact__name">
-                            Время работы
-                        </div>
-                        <div class="contact__text">
-                            Работаем всегда круглосуточно!
+                        <div class="contact__wrapper">
+                            <div class="contact__icon">
+                                <img src="img/svg/clock.svg">
+                            </div>
+                            <div class="contact__name">
+                                Время работы
+                            </div>
+                            <div class="contact__text">
+                                Работаем всегда круглосуточно!
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -986,4 +1029,23 @@
     </section>
 
 </main>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    var mapData = [{
+        id: "map",
+        center: [55.611072, 37.575694],
+        placemarks: [
+            {
+                header: 'г. Москва, Литовский бульвар, д. 34',
+                coords: [55.610041, 37.543758],
+                opened: true,
+                iconImageHref: 'img/map-marker.svg',
+                iconImageSize: [24, 32],
+                iconImageOffset: [-21, -45],
+            }
+        ],
+        zoom: 14,
+
+    }];
+</script>
 <include src="part/footer.inc.html"></include>
