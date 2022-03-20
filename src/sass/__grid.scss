@@ -14,7 +14,7 @@ $bp-larger-than-1250 : "min-width: 1250px" !default;
 $bp-larger-than-1400 : "min-width: 1400px" !default;
 
 //Grid Variables
-$container-width: 1280px !default;
+$container-width: 1470px !default;
 $container-width-larger-than-mobile: 100% !default;
 $container-width-larger-than-phablet: 80% !default;
 $container-width-larger-than-desktop: 80% !default;
@@ -50,12 +50,21 @@ $container-width-larger-than-1400: 100% !default;
     max-width: 1024px;
   }
 }
+
+@media (#{$bp-larger-than-desktopfullhd}) {
+  .b-container {
+    width: $container-width-larger-than-desktop;
+    max-width: $container-width;
+  }
+}
+/*
 @media (#{$bp-larger-than-1400}) {
   .b-container {
     width: $container-width-larger-than-1400;
     max-width: 1244px;
   }
 }
+ */
 
 // Clearing
 //––––––––––––––––––––––––––––––––––––––––––––––––––

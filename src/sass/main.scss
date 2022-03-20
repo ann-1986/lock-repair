@@ -1,6 +1,7 @@
 @import 'bootstrap/css/bootstrap.min';
 @import '../fonts/webfontkit-20220311-034106/stylesheet.scss';
 @import '_grid';
+@import 'mediahelp';
 @import 'sprite';
 @import '../vendor/owlcarousel/owl.carousel.scss';
 @import '../vendor/owlcarousel/owl.theme.default.scss';
@@ -46,7 +47,7 @@ body {
 }
 
 .b-container {
-    max-width: 1470px;
+    //max-width: 1470px;
 }
 
 h2 {
@@ -94,11 +95,17 @@ h3 {
         text-decoration: none;
         color: #000;
     }
+
+    &:focus {
+        outline: none;
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 .work {
     background-color: #F2F2F2;
-    padding: 75px 0 80px;
+    padding: 75px 0 86px;
     color: #000;
 
     &__header {
@@ -117,7 +124,7 @@ h3 {
         box-sizing: border-box;
         border-radius: 8px;
         //height: 400px;
-        padding: 24px 32px 24px 32px;
+        padding: 24px 32px 8px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -133,6 +140,7 @@ h3 {
         padding: 15px 8px 15px 8px;
         display: flex;
         align-items: center;
+        margin-bottom: 8px;
 
         &:hover {
             background-color: #F2F2F2;
@@ -157,6 +165,8 @@ h3 {
 }
 
 .section-header {
+    margin-bottom: 25px;
+
     &__title {
         font-weight: 400;
         font-size: 24px;
@@ -165,13 +175,15 @@ h3 {
     }
 
     &__description {
-        margin-bottom: 25px;
         font-weight: 500;
         font-size: 32px;
         line-height: 45px;
         color: #000;
         position: relative;
         padding-left: 10px;
+        display: flex;
+        align-items: center;
+        min-height: 62px;
 
         &:before {
             content: "";
@@ -258,17 +270,17 @@ h3 {
 }
 
 .staff {
-    padding: 68px 0 88px;
+    padding: 68px 0 80px;
 
     &__grid {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 54px 0 16px;
+        padding: 54px 0 0px;
     }
 
     &__item {
-        width: 25%;
+        //width: 25%;
         margin-bottom: 40px;
         //margin-right: -19px;
     }
@@ -294,17 +306,22 @@ h3 {
     &__button {
         display: flex;
         justify-content: center;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
     }
 
     &__text {
         max-width: 1220px;
+        padding-top: 0px;
+
+        p {
+            margin: 0 0 24px;
+        }
     }
 }
 
 .program {
     background: #F2F2F2;
-    padding: 60px 0 0 0;
+    padding: 56px 0 0 0;
     height: 895px;
     overflow: hidden;
 
@@ -371,14 +388,16 @@ h3 {
 
     &__button {
         margin-top: 60px;
+
         .btn {
             margin-bottom: 20px;
+            max-width: 185px;
         }
     }
 }
 
 .section-price {
-    padding: 100px 0;
+    padding: 98px 0 29px;
 }
 
 .price {
@@ -386,8 +405,8 @@ h3 {
         background: #FFF;
         box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
         border-radius: 8px;
-        padding: 14px;
-        margin-bottom: 24px;
+        padding: 14px 12px 12px;
+        margin-bottom: 22px;
 
         &.active {
             .price {
@@ -411,7 +430,10 @@ h3 {
     &__wrapper {
         border: 1px dashed #BDBDBD;
         border-radius: 8px;
-        padding: 16px 0;
+        //padding: 16px 0;
+        //height: 78px;
+        //display: flex;
+        //align-items: center;
     }
 
     &__title {
@@ -419,9 +441,11 @@ h3 {
         font-size: 24px;
         line-height: 34px;
         color: #000;
-        padding: 10px 20px 10px 50px;
+        padding: 4px 20px 4px 50px;
         position: relative;
-        display: block;
+        height: 76px;
+        display: flex;
+        align-items: center;
 
         &:hover {
             text-decoration: none;
@@ -464,7 +488,7 @@ h3 {
     &__line {
         display: flex;
         justify-content: space-between;
-        padding: 11px 31px 11px 19px;
+        padding: 11px 31px 10px 19px;
         font-size: 18px;
         align-items: center;
 
@@ -484,13 +508,14 @@ h3 {
     }
 }
 .manufacturer {
-    padding: 50px 0;
+    padding: 34px 0 42px;
 
     &__grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
-        gap: 16px;
+        gap: 25px 16px;
+        padding-top: 38px;
     }
 
     &__item {
@@ -509,19 +534,20 @@ h3 {
 }
 
 .location {
-    padding: 50px 0;
+    padding: 50px 0 55px;
 
     &__grid {
         display: flex;
         flex-wrap: wrap;
-        padding-top: 40px;
+        padding-top: 86px;
     }
 
     &__item {
-        width: 33.3%;
+        width: 25%;
         display: flex;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         color: #000;
+        padding-left: 6px;
 
         &:hover {
             color: #000;
@@ -546,13 +572,13 @@ h3 {
 
 .section-contact {
     overflow: hidden;
-    padding: 150px 0;
+    padding: 132px 0 126px;
 }
 .contact {   
     &__pic {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        top: 25%;
+        right: -55px;
         z-index: 1;
     }
 
@@ -561,23 +587,51 @@ h3 {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 24px;
+        //gap: 24px;
         z-index: 2;
         position: relative;
+        max-width: 754px;
+        padding-top: 4px;
+        margin-left: -12px;
+        margin-right: -12px;
     }
 
     &__item {
-        width: 48%;
+        width: 50%;
+        padding: 0 12px 24px;
+    }
+
+    &__card {
         padding: 12px;
         box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
         border-radius: 8px;
         background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &--emails {
+            .contact {
+                &__name {
+                    margin-bottom: 20px;
+                }
+
+                &__text {
+                    line-height: 1;
+
+                    span {
+                        font-size: 10px;
+                        line-height: 0.8;
+                    }
+                }
+            }
+        }
     }
 
-    &__card {
+    &__wrapper {
         border: 1px dashed #BDBDBD;
         border-radius: 8px;
-        padding: 12px;
+        padding: 12px 10px 12px 12px;
         min-height: 202px;
         display: flex;
         flex-direction: column;
@@ -593,27 +647,18 @@ h3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 9px;
     }
 
     &__name {
         font-size: 20px;
         font-weight: 500;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
 
     &__text {
         line-height: 2;
 
-    }
-
-    &__mailtext {
-        line-height: 1.4;
-
-        span {
-            font-size: 10px;
-            line-height: 1;
-        }
     }
 }
 
