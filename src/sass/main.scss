@@ -662,17 +662,14 @@ h3 {
     }
 }
 
-.section-headerpage {
+.page-header {
     margin-bottom: 24px;
     font-weight: 500;
     font-size: 32px;
     line-height: 45px;
     color: #000;
     position: relative;
-    padding-left: 10px;
-    height: 90px;
-    display: flex;
-    align-items: center;
+    padding: 8px 0 12px 10px;
 
     &:before {
         content: "";
@@ -685,9 +682,9 @@ h3 {
         background-color: #F2C94C;
     } 
 }
-
-.breadcrumbs {
-    padding: 70px 0 0 0;
+.page main {
+    padding-top: 35px;
+    padding-bottom: 70px;
 }
 
 .section-ourprice {
@@ -711,6 +708,8 @@ h3 {
 }
 
 .breadcrumbs {
+    padding: 35px 0 7px;
+
     ul {
         li {
             margin: 0;
@@ -736,6 +735,10 @@ h3 {
                 font-size: 18px;
                 line-height: 25px;
                 color: #828282;
+            }
+
+            &:hover {
+                color: #333;
             }
         }
     }
@@ -1016,5 +1019,153 @@ h3 {
         color: #000;
         margin-top: 50px;
         margin-bottom: 36px;
+    }
+}
+
+.contacts {
+    &__grid {
+        display: flex;
+        flex-direction: column;
+
+        @media ($bp-larger-than-desktop) {
+            flex-direction: row;
+        }
+    }
+
+    &__body {
+        width: 100%;
+    }
+
+    &__form {
+        flex-shrink: 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media ($bp-larger-than-phablet) {
+            width: 400px;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            margin-left: 30px;
+        }
+
+        @media ($bp-larger-than-note) {
+            margin-top: -72px;
+        }
+
+        @media ($bp-larger-than-desktopfullhd) {
+            width: 450px;
+        }
+    }
+}
+
+
+.contacts-page {
+    &__pic {
+        position: absolute;
+        top: 25%;
+        right: -55px;
+        z-index: 1;
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        //gap: 24px;
+        z-index: 2;
+        position: relative;
+        max-width: 754px;
+        padding-top: 4px;
+        justify-content: center;
+
+        @media ($bp-larger-than-tablet) {
+            margin-left: -12px;
+            margin-right: -12px;
+            justify-content: flex-start;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding: 0 0 24px;
+        max-width: 400px;
+
+        @media ($bp-larger-than-tablet) {
+            width: 50%;
+            padding: 0 12px 24px;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            width: 100%;
+        }
+
+        @media ($bp-larger-than-note) {
+            width: 50%;
+        }
+    }
+
+    &__card {
+        padding: 12px;
+        box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
+        border-radius: 8px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &--emails {
+            .contacts-page {
+                &__name {
+                    margin-bottom: 20px;
+                }
+
+                &__text {
+                    line-height: 1;
+
+                    span {
+                        font-size: 10px;
+                        line-height: 0.8;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        border: 1px dashed #BDBDBD;
+        border-radius: 8px;
+        padding: 12px 10px 12px 12px;
+        min-height: 202px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #F2C94C;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 9px;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        line-height: 2;
+
+        a {
+            color: #000;
+
+        }
     }
 }
