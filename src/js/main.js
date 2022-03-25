@@ -61,6 +61,14 @@ $(function() {
 
     // слайдер на главной
     initLeadSlider();
+    // слайдер Сотрудники
+    initStaffSlider();
+    // слайдер Производители
+    initManufacturerSlider();
+    // Города
+    initLocationCity();
+    // Все услуги
+    initServices();
 
     initXtab();
     toogler({
@@ -145,10 +153,36 @@ $(function() {
         hideSlideMenu();
     });
 
-    new WOW().init();
+    // new WOW().init();
 
-    $(document).scroll(function(){
-        setFixedHeader();
+    $('.services-all').on('click', function(e) {
+        e.preventDefault();
+        var parent = $('.work__grid');
+
+        if (parent.hasClass('collapse')) {
+            servicesShow();
+            parent.removeClass('collapse');
+            $(this).text("Свернуть");
+        } else {
+            servicesHide();
+            parent.addClass('collapse');
+            $(this).text("Все услуги");
+        }
+    });
+
+    $('.location-all').on('click', function(e) {
+        e.preventDefault();
+        var parent = $('.location__grid');
+
+        if (parent.hasClass('collapse')) {
+            locationShow();
+            $('.location__grid').removeClass('collapse');
+            $(this).text("Свернуть");
+        } else {
+            locationHide();
+            $('.location__grid').addClass('collapse');
+            $(this).text("Смотреть все города");
+        }
     });
 });
 
@@ -186,6 +220,140 @@ var initMobileCategoryMenu = function() {
     })
 }
 
+var isManufacturerSliderInit = false;
+var manufacturerSliderSelector = '.manufacturer-slider-js';
+var manufacturerContainer = '.manufacturer__grid';
+
+var initManufacturerSlider = function () {
+    if ($(window).width() < 1000) {
+        console.log("isManufacturerSliderInit", isManufacturerSliderInit);
+        if (!isManufacturerSliderInit) {
+            cloneManufacturer()
+            $(manufacturerSliderSelector).show();
+            startManufacturerSlider();
+            $(manufacturerContainer).hide();
+            isManufacturerSliderInit = true;
+        }
+    } else {
+        if (isManufacturerSliderInit) {
+            stopManufacturerSlider();
+            $(manufacturerContainer).show();
+            $(manufacturerSliderSelector).hide();
+            isManufacturerSliderInit = false;
+        }
+    }
+};
+
+var cloneManufacturer = () => {
+    var slider = $(".manufacturer__slider");
+    var cls;
+    $(".manufacturer__grid").find('.manufacturer__item').each(function(index, item) {
+        if (index % 6 === 0) {
+            cls = 'manufacturer__group--' + index;
+            slider.append('<div class="manufacturer__group '+cls+'" />');
+        }
+
+        $(item).clone().appendTo("."+ cls);
+    });
+};
+
+var startManufacturerSlider = function () {
+    $(manufacturerSliderSelector).owlCarousel({
+        loop: false,
+        margin: 0,
+        responsiveClass: true,
+        responsive: {
+            0:{
+                nav: false,
+                items: 1,
+            },
+            750:{
+                items: 1,
+                nav: false
+            },
+        }
+    });
+};
+var stopManufacturerSlider = function () {
+    $(manufacturerSliderSelector).trigger('destroy.owl.carousel');
+};
+
+var isStaffSliderInit = false;
+var staffSliderSelector = '.staff-slider-js';
+
+var initStaffSlider = function () {
+    if ($(window).width() < 1000) {
+        if (!isStaffSliderInit) {
+            startStaffSlider();
+            isStaffSliderInit = true;
+        }
+    } else {
+        if (isStaffSliderInit) {
+            stopStaffSlider();
+            isStaffSliderInit = false;
+        }
+    }
+}
+
+var startStaffSlider = function () {
+    $(staffSliderSelector).owlCarousel({
+        loop: false,
+        margin: 0,
+        responsiveClass: true,
+        responsive:{
+            0:{
+                items: 1,
+                nav: false,
+                stagePadding: 50,
+            },
+            750:{
+                items: 3,
+                nav: false
+            },
+        }
+    });
+}
+
+var stopStaffSlider = function () {
+    $(staffSliderSelector).trigger('destroy.owl.carousel');
+}
+
+var initLocationCity = function () {
+    if ($(window).width() < 450) {
+        locationHide();
+    } else {
+        locationShow();
+    }
+}
+
+var locationShow = function () {
+    $(".location__grid").removeClass('collapse');
+    $(".location__item").show();
+}
+
+var locationHide = function () {
+    $(".location__grid").addClass('collapse');
+    $(".location__item").slice(5,100).hide();
+}
+
+var initServices = function () {
+    if ($(window).width() < 450) {
+        servicesHide();
+    } else {
+        servicesShow();
+    }
+}
+
+var servicesShow = function () {
+    $(".work__grid").removeClass('collapse');
+    $(".work__item").show();
+}
+
+var servicesHide = function () {
+    $(".work__grid").addClass('collapse');
+    $(".work__item").slice(5,100).hide();
+}
+
 var initLeadSlider = function() {
     var selector = '.lead-slider-js';
 
@@ -194,7 +362,11 @@ var initLeadSlider = function() {
         margin: 0,
         responsiveClass: true,
         responsive:{
-            0:{
+            0: {
+                items: 1,
+                nav: false
+            },
+            450: {
                 items: 1,
                 nav: true
             }
@@ -299,6 +471,10 @@ $(window).resize(function(){
 var resizedw = function(){
     // $('body').removeClass('show-slide-menu');
     // $('body').removeClass('show-phones-menu');
+    initStaffSlider();
+    initManufacturerSlider();
+    initLocationCity();
+    initServices();
 };
 
 var setFixedHeader = function() {

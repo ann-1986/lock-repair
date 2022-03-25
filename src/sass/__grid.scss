@@ -17,7 +17,7 @@ $bp-larger-than-1400 : "min-width: 1400px" !default;
 $container-width: 1470px !default;
 $container-width-larger-than-mobile: 100% !default;
 $container-width-larger-than-phablet: 80% !default;
-$container-width-larger-than-desktop: 80% !default;
+$container-width-larger-than-desktop: 90% !default;
 $container-width-larger-than-1400: 100% !default;
 
 .b-container {
@@ -52,6 +52,13 @@ $container-width-larger-than-1400: 100% !default;
   .b-container {
     width: $container-width-larger-than-desktop;
     max-width: 1024px;
+  }
+}
+
+@media (#{$bp-larger-than-note}) {
+  .b-container {
+    width: $container-width-larger-than-desktop;
+    max-width: 1170px;
   }
 }
 
