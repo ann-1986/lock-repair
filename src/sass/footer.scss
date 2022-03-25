@@ -1,26 +1,50 @@
 
 .footer {
   background-color: #262626;
-  display: none;
 
   @media ($bp-larger-than-desktopfullhd) {
     display: block;
   }
 
   &__top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
+    &--desktop {
+      display: none;
+
+      @media ($bp-larger-than-phablet) {
+        display: inline;
+      }
+    }
+
+    &--mobile {
+      display: inline;
+
+      @media ($bp-larger-than-phablet) {
+        display: none;
+      }
+    }
+
     img {
       //height: 125px;
+      max-width: 100%;
     }
   }
 
   &__contacts {
-    padding: 62px 20px 3px;
+    padding: 24px 0 3px;
+
+    @media ($bp-larger-than-phablet) {
+      padding: 62px 20px 3px;
+    }
 
     .footer-social {
       display: flex;
@@ -78,8 +102,12 @@
   }
 
   &__menu {
-    margin-bottom: 100px;
-    padding-right: 100px;
+    margin-bottom: 56px;
+
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 100px;
+      padding-right: 100px;
+    }
 
     ul {
       list-style-type: none;
@@ -87,6 +115,23 @@
       padding: 0;
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      @media ($bp-larger-than-phablet) {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      li {
+        + li {
+          margin-top: 40px;
+
+          @media ($bp-larger-than-phablet) {
+            margin-top: 0;
+          }
+        }
+      }
 
       a {
         color: #fff;
@@ -109,6 +154,11 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    flex-direction: column;
+
+    @media ($bp-larger-than-phablet) {
+      flex-direction: row;
+    }
 
     a {
       color: #fff;
@@ -122,12 +172,24 @@
   }
 
   &__company {
-    width: 33.33%;
+    display: none;
+
+    @media ($bp-larger-than-phablet) {
+      width: 33.33%;
+      display: block;
+    }
   }
 
   &__social {
-    width: 33.33%;
     text-align: center;
+    margin-top: 32px;
+    order: 3;
+
+    @media ($bp-larger-than-phablet) {
+      order: 2;
+      margin-top: 0;
+      width: 33.33%;
+    }
 
     a {
       margin: 0 14px;
@@ -141,7 +203,13 @@
   }
 
   &__copyright {
-    text-align: right;
-    width: 33.33%;
+    order: 2;
+    text-align: center;
+
+    @media ($bp-larger-than-phablet) {
+      order: 3;
+      text-align: right;
+      width: 33.33%;
+    }
   }
 }
