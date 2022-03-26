@@ -46,15 +46,26 @@ body {
     }
 }
 
+.in-desktop {
+    display: none;
+
+    @media ($bp-larger-than-phablet) {
+        display: inline;
+    }
+}
+
 .b-container {
     //max-width: 1470px;
 }
 
 h2 {
     font-weight: 500;
-    font-size: 32px;
-    line-height: 51px;
+    font-size: 24px;
     color: #000;
+
+    @media ($bp-larger-than-phablet) {
+        font-size: 32px;
+    }
 
     @media ($bp-larger-than-desktop) {
         font-size: 36px;
@@ -81,7 +92,12 @@ h3 {
         line-height: 45px;
     }
 
-    @media ($bp-larger-than-phablet) {
+    @media ($bp-larger-than-desktop) {
+        font-size: 36px;
+        line-height: 68px;
+    }
+
+    @media ($bp-larger-than-desktophd) {
         font-size: 48px;
         line-height: 68px;
     }
@@ -112,6 +128,7 @@ h3 {
     &:hover {
         text-decoration: none;
         color: #000;
+        box-shadow: 0px 4px 15px rgba(52, 45, 45, 0.4);
     }
 
     &:focus {
@@ -174,6 +191,14 @@ h3 {
 
         @media ($bp-larger-than-phablet) {
             height: 92px;
+        }
+
+        @media ($bp-larger-than-tablet) {
+            width: 215px;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            width: 236px;
         }
 
         &:hover {
@@ -274,6 +299,10 @@ h3 {
     padding: 44px 0 15px;
 
     @media ($bp-larger-than-phablet) {
+        padding: 78px 0 36px;
+    }
+
+    @media ($bp-larger-than-desktop) {
         padding: 78px 0;
     }
 
@@ -308,7 +337,11 @@ h3 {
         border-radius: 8px;
         background-color: #fff;
 
-        @media ($bp-larger-than-phablet) {
+        @media ($bp-larger-than-desktop) {
+            width: 48%;
+        }
+
+        @media ($bp-larger-than-desktophd) {
             width: 31%;
         }
     }
@@ -368,6 +401,10 @@ h3 {
     padding: 12px 0 30px;
 
     @media ($bp-larger-than-phablet) {
+        padding: 34px 0 40px;
+    }
+
+    @media ($bp-larger-than-desktop) {
         padding: 68px 0 80px;
     }
 
@@ -395,13 +432,8 @@ h3 {
         }
     }
 
-    &__card {
-
-    }
-
     &__foto {
         overflow: hidden;
-        height: 240px;
         margin-bottom: 23px;
         display: flex;
         align-items: end;
@@ -416,6 +448,14 @@ h3 {
         font-weight: 500;
         font-size: 18px;
         line-height: 26px;
+
+        @media ($bp-larger-than-tablet) {
+            font-size: 16px;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            font-size: 18px;
+        }
     }
 
     &__experience {
@@ -496,7 +536,7 @@ h3 {
         z-index: 1;
         display: none;
 
-        @media ($bp-larger-than-phablet) {
+        @media ($bp-larger-than-desktop) {
             display: block;
         }
     }
@@ -506,7 +546,7 @@ h3 {
         position: relative;
         z-index: 2;
 
-        @media ($bp-larger-than-phablet) {
+        @media ($bp-larger-than-desktop) {
             max-width: 65%;
         }
     }
@@ -712,6 +752,8 @@ h3 {
             font-weight: 500;
             font-size: 16px;
             padding: 2px;
+            white-space: nowrap;
+            margin-left: 8px;
 
             @media ($bp-larger-than-tablet) {
                 font-size: 24px;
@@ -811,6 +853,15 @@ h3 {
 
     &__slider {
         padding-top: 68px;
+
+        &.owl-carousel {
+            .owl-item {
+                img {
+                    width: auto;
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -848,6 +899,18 @@ h3 {
         color: #000;
         padding-left: 6px;
 
+        @media ($bp-larger-than-tablet) {
+            width: 50%;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            width: 33.33%;
+        }
+
+        @media ($bp-larger-than-desktopfullhd) {
+            width: 25%;
+        }
+
         &:hover {
             color: #000;
         }
@@ -874,7 +937,7 @@ h3 {
         display: flex;
         align-items: center;
 
-        @media ($bp-larger-than-mobile) {
+        @media ($bp-larger-than-desktophd) {
             font-size: 32px;
             display: block;
         }
@@ -905,7 +968,7 @@ h3 {
     overflow: hidden;
     padding: 76px 0 36px;
 
-    @media ($bp-larger-than-phablet) {
+    @media ($bp-larger-than-desktop) {
         padding: 132px 0 126px;
     }
 }
@@ -928,8 +991,12 @@ h3 {
         position: relative;
         max-width: 754px;
 
-        @media ($bp-larger-than-phablet) {
-            width: 77%;
+        @media ($bp-larger-than-tablet) {
+            max-width: 77%;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            max-width: 77%;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -942,7 +1009,7 @@ h3 {
     &__item {
         padding: 0 0 24px;
 
-        @media ($bp-larger-than-phablet) {
+        @media ($bp-larger-than-desktop) {
             padding: 0 12px 24px;
             width: 50%;
         }
@@ -1012,14 +1079,18 @@ h3 {
 .page-header {
     margin-bottom: 24px;
     font-weight: 500;
-    font-size: 26px;
-    line-height: 45px;
+    font-size: 22px;
     color: #000;
     position: relative;
     padding: 8px 0 12px 10px;
 
+    @media ($bp-larger-than-iphone6) {
+        font-size: 26px;
+    }
+
     @media ($bp-larger-than-phablet) {
         font-size: 32px;
+        margin-bottom: 45px;
     }
 
 
@@ -1064,24 +1135,32 @@ h3 {
 }
 
 .breadcrumbs {
-    padding: 35px 0 7px;
+    padding: 35px 0 17px;
 
     ul {
         li {
             margin: 0;
             padding: 0;
             display: inline-block;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 25px;
             color: #828282;
+
+            @media ($bp-larger-than-tablet) {
+                font-size: 18px;
+            }
         }
         
-        a{
-            font-size: 18px;
+        a {
+            font-size: 16px;
             line-height: 25px;
             color: #828282;
             text-decoration: none;
             transition: .5s;
+
+            @media ($bp-larger-than-tablet) {
+                font-size: 18px;
+            }
 
             &:after {
                 margin: 0 2px;
@@ -1127,9 +1206,9 @@ h3 {
     &__image {
         display: none;
 
-        @media ($bp-larger-than-desktophd) {
+        @media ($bp-larger-than-desktop) {
             position: absolute;
-            bottom: 0;
+            bottom: -57px;
             right: 0;
             z-index: 1;
             display: block;
@@ -1140,19 +1219,25 @@ h3 {
         width: 100%;
         //width: 100%;
         background-color: #fff;
+        position: relative;
+        z-index: 2;
 
-        @media ($bp-larger-than-desktophd) {
+        @media ($bp-larger-than-desktop) {
             max-width: 65%;
             width: 100%;
-            position: relative;
-            z-index: 2;
             background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 10px 15px rgba(189,184,184,.25);
+        }
+
+        @media ($bp-larger-than-desktopfullhd) {
+            padding: 0;
+            box-shadow: none;
         }
     }
 }
 
 .info {
-
     &__about {
         margin-bottom: 40px;
     }
@@ -1172,6 +1257,7 @@ h3 {
 .staff-page {
     padding: 68px 0 88px;
 
+    /*
     &__grid {
         display: flex;
         justify-content: center;
@@ -1212,6 +1298,65 @@ h3 {
         font-size: 18px;
         line-height: 26px;
     }
+     */
+
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 24px 0 0px;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        @media ($bp-larger-than-phablet) {
+            padding: 54px 0 0;
+        }
+    }
+
+    &__item {
+        width: 50%;
+        margin-bottom: 23px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media ($bp-larger-than-phablet) {
+            margin-bottom: 40px;
+        }
+
+        @media ($bp-larger-than-tablet) {
+            width: 33.33%;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            width: 25%;
+        }
+    }
+
+    &__foto {
+        overflow: hidden;
+        margin-bottom: 23px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+
+        @media ($bp-larger-than-tablet) {
+            font-size: 16px;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            font-size: 18px;
+        }
+    }
 
     &__experience {
         font-weight: 250;
@@ -1226,10 +1371,10 @@ h3 {
 
     &__information {
         max-width: 900px;
-        overflow: hidden;
+        //overflow: hidden;
 
         img {
-            width: 100%;
+            max-width: 100%;
             margin-bottom: 4px;
         }
     }
@@ -1263,18 +1408,24 @@ h3 {
     &__wrapper {
         border: 1px dashed #BDBDBD;
         border-radius: 8px;
-        padding: 16px 0;
+        padding: 3px 0;
     }
 
     &__item {
         padding: 10px;
 
         @media ($bp-larger-than-tablet) {
-            padding: 20px;
+            padding: 15px 20px;
         }
 
         &:nth-child(even) {
             background: #F8F8F8;
+            padding: 10px;
+
+            @media ($bp-larger-than-tablet) {
+                padding: 24px 20px;
+            }
+
         }
 
         
@@ -1299,21 +1450,25 @@ h3 {
 
     &__title {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
         color: #000;
         padding: 0 10px 4px 30px;
         position: relative;
         display: block;
 
+        @media ($bp-larger-than-mobile) {
+            font-size: 18px;
+        }
+
         @media ($bp-larger-than-tablet) {
-            font-size: 22px;
-            line-height: 34px;
+            //font-size: 22px;
+            //line-height: 34px;
         }
 
         @media ($bp-larger-than-desktop) {
-            font-size: 24px;
-            padding: 0 20px 4px 30px;
+            //font-size: 24px;
+            //padding: 0 20px 4px 30px;
         }
 
         &:hover {
@@ -1349,10 +1504,15 @@ h3 {
 
     &__answer {
         font-weight: 250;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 25px;
         color: #000;
         display: none;
+        padding: 12px 0 0;
+
+        @media ($bp-larger-than-mobile) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -1362,17 +1522,29 @@ h3 {
 
 .installation {
     &__body {
-        display: flex;
+        margin-bottom: 38px;
+
+        @media ($bp-larger-than-desktop) {
+            display: flex;
+        }
     }
 
     &__image {
         max-width: 713px;
-        height: 432px;
-        margin-right: 38px;
-        //flex-shrink: 1;
-        width: 100%;
+        margin-bottom: 38px;
+        flex-shrink: 0;
         left: 0;
         top: 0;
+        width: 100%;
+
+        @media ($bp-larger-than-desktop) {
+            width: 50%;
+            margin-right: 38px;
+        }
+
+        @media ($bp-larger-than-note) {
+            width: 100%;
+        }
 
         img {
             width: 100%;
@@ -1381,15 +1553,31 @@ h3 {
     }
 
     &__info {
-        width: 50%;
+        flex-shrink: 0;
+        width: 100%;
+
+        @media ($bp-larger-than-desktop) {
+            width: 50%;
+        }
     }
 
     &__description {
         font-weight: 400;
         font-size: 18px;
-        line-height: 25px;
         color: #000;
         margin-bottom: 16px;
+
+        @media ($bp-larger-than-desktop) {
+            font-size: 14px;
+        }
+
+        @media ($bp-larger-than-desktophd) {
+            font-size: 16px;
+        }
+
+        @media ($bp-larger-than-note) {
+            font-size: 18px;
+        }
     }
 
     &__price {
@@ -1401,11 +1589,18 @@ h3 {
     }
 
     &__order {
-        display: flex;
+        @media ($bp-larger-than-mobile) {
+            display: flex;
+        }
     }
 
     &__btn {
-        margin-right: 24px;
+        margin-bottom: 24px;
+
+        @media ($bp-larger-than-mobile) {
+            margin-bottom: 0;
+            margin-right: 24px;
+        }
 
         .btn {
             width: 174px;
@@ -1415,14 +1610,31 @@ h3 {
     &__caption {
         font-weight: 500;
         font-size: 14px;
-        line-height: 20px;
         color: #000;
         display: flex;
         align-items: center;
+
+        @media ($bp-larger-than-desktop) {
+            font-size: 13px;
+        }
+
+        @media ($bp-larger-than-desktophd) {
+            font-size: 14px;
+        }
+    }
+
+    .text {
+        margin-bottom: 58px;
+
+        p {
+            margin-bottom: 24px;
+        }
     }
 }
 
 .other-services {
+    margin-bottom: 95px;
+
     &__header{
         font-weight: 500;
         font-size: 32px;
@@ -1566,13 +1778,22 @@ h3 {
     }
 
     &__name {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         margin-bottom: 10px;
+
+        @media ($bp-larger-than-iphone6) {
+            font-size: 20px;
+        }
     }
 
     &__text {
         line-height: 2;
+        font-size: 14px;
+
+        @media ($bp-larger-than-iphone6) {
+            font-size: 18px;
+        }
 
         a {
             color: #000;
@@ -1585,7 +1806,7 @@ h3 {
 
     &__grid{
         display: flex;
-        justify-content: center;
+        //justify-content: center;
         gap: 30px;
         flex-wrap: wrap;
         margin-bottom: 60px;
@@ -1602,6 +1823,7 @@ h3 {
 
     &__item {
         width: 100%;
+        max-width: 452px;
 
         @media ($bp-larger-than-desktop) {
             width: 47%;
@@ -1619,7 +1841,7 @@ h3 {
 
     &__image {
         box-shadow: (0px 4px 15px rgba(52, 45, 45, 0.25));
-        max-width: 452px;
+        //max-width: 452px;
         margin-bottom: 24px;
 
         img {
@@ -1655,6 +1877,10 @@ h3 {
     &__button {
         display: flex;
         justify-content: center;
+
+        .btn {
+            max-width: 156px;
+        }
     }
 
 }
@@ -1675,7 +1901,6 @@ h3 {
 
         img {
             width: 100%;
-            object-fit: cover;
         }
     }
 
@@ -1688,39 +1913,23 @@ h3 {
     }
 }
 
-.repair {
-    &__grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        margin-bottom: 80px;
-    }
+.repair-card {
+    width: 100%;
+    max-width: 452px;
+    background: #FFF;
+    box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    display: block;
 
-    &__item {
-        width: 100%;
-        max-width: 452px;
-        background: #FFF;
-        box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.25);
-        border-radius: 8px;
-        padding: 12px;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 26px;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
         color: #000000;
-
-        @media ($bp-larger-than-tablet) {
-            width: 47%;
-        }
-
-        @media ($bp-larger-than-desktop) {
-            width: 30%;
-        }
-
-        &:hover {
-            cursor: pointer;
-            text-decoration: none;
-            color: #000000;
-        }
     }
 
     &__wrapper {
@@ -1738,5 +1947,30 @@ h3 {
 
     &__caption {
         padding: 12px;
+    }
+}
+
+.repair {
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 56px;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    &__item {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 24px;
+        width: 100%;
+
+        @media ($bp-larger-than-tablet) {
+            width: 50%;
+        }
+
+        @media ($bp-larger-than-desktop) {
+            width: 33.33%;
+        }
     }
 }
