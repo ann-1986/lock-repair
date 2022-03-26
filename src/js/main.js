@@ -366,7 +366,7 @@ var initLeadSlider = function() {
                 items: 1,
                 nav: false
             },
-            450: {
+            1000: {
                 items: 1,
                 nav: true
             }
