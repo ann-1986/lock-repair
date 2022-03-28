@@ -153,7 +153,7 @@ $(function() {
         hideSlideMenu();
     });
 
-    // new WOW().init();
+    new WOW().init();
 
     $('.services-all').on('click', function(e) {
         e.preventDefault();
@@ -162,11 +162,9 @@ $(function() {
         if (parent.hasClass('collapse')) {
             servicesShow();
             parent.removeClass('collapse');
-            $(this).text("Свернуть");
         } else {
             servicesHide();
             parent.addClass('collapse');
-            $(this).text("Все услуги");
         }
     });
 
@@ -347,11 +345,13 @@ var initServices = function () {
 var servicesShow = function () {
     $(".work__grid").removeClass('collapse');
     $(".work__item").show();
+    $(".services-all").text("Свернуть");
 }
 
 var servicesHide = function () {
     $(".work__grid").addClass('collapse');
     $(".work__item").slice(5,100).hide();
+    $(".services-all").text("Все услуги");
 }
 
 var initLeadSlider = function() {

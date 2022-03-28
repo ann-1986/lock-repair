@@ -1,4 +1,17 @@
 .callback-form {
+  &#order-form {
+    padding: 12px;
+    border-radius: 8px;
+    width: 450px;
+
+    .fancybox-close-small {
+      top: 8px;
+      right: 8px;
+    }
+  }
+}
+
+.callback-form {
   &#callback-form {
     padding: 12px;
     border-radius: 8px;

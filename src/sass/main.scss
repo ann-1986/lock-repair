@@ -6,6 +6,7 @@
 @import '../vendor/owlcarousel/owl.carousel.scss';
 @import '../vendor/owlcarousel/owl.theme.default.scss';
 @import '../vendor/fancybox/jquery.fancybox.min';
+@import '../vendor/animate';
 
 $anim: all 0.2s ease 0s;
 $anim5: all 0.5s;
@@ -198,6 +199,14 @@ h3 {
         }
 
         @media ($bp-larger-than-desktop) {
+            width: 236px;
+        }
+
+        @media ($bp-larger-than-note) {
+            width: 228px;
+        }
+
+        @media ($bp-larger-than-desktopfullhd) {
             width: 236px;
         }
 
@@ -706,22 +715,22 @@ h3 {
     }
 
     &__arrow {
-        content: "";
         display: block;
-        width: 16px;
-        //height: 16px;
         position: absolute;
         left: 16px;
         top: 50%;
         transform: translateY(-50%);
-        background: transparent url('img/svg/plus.svg') center center no-repeat;
         transition: $anim;
 
         &.plus {
+            width: 16px;
+            height: 16px;
             opacity: 1;
         }
 
         &.minus {
+            width: 16px;
+            height: 2px;
             opacity: 0;
         }
     }
@@ -796,11 +805,11 @@ h3 {
     &__grid {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         padding-top: 38px;
 
         @media ($bp-larger-than-desktopfullhd) {
-            justify-content: start;
+            justify-content: center;
         }
     }
 
@@ -848,6 +857,8 @@ h3 {
             display: block;
             margin: auto;
             width: 100%;
+            object-fit: contain;
+            max-height: 100%;
         }
     }
 
@@ -1073,10 +1084,20 @@ h3 {
     &__text {
         line-height: 2;
 
+        a {
+            color: #000;
+            text-decoration: none;
+
+            &:hover {
+                color: #000;
+                text-decoration: none;
+            }
+        }
     }
 }
 
 .page-header {
+    margin-top: 0;
     margin-bottom: 24px;
     font-weight: 500;
     font-size: 22px;
@@ -1133,6 +1154,16 @@ h3 {
     color: #000;
     margin-bottom: 26px;
 }
+
+.stext {
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        color: #000;
+        margin-bottom: 26px;
+    }
+}
+
 
 .breadcrumbs {
     padding: 35px 0 17px;
@@ -1234,12 +1265,14 @@ h3 {
             padding: 0;
             box-shadow: none;
         }
-    }
-}
 
-.info {
-    &__about {
-        margin-bottom: 40px;
+        h3 {
+            margin-top: 40px;
+
+            &:first-child {
+                margin-top: 24px;
+            }
+        }
     }
 }
 
@@ -1483,21 +1516,23 @@ h3 {
     }
 
     &__arrow {
-        content: "";
         display: block;
-        width: 16px;
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        background: transparent url('img/svg/plus.svg') center center no-repeat;
         transition: $anim;
+        margin-top: -1px;
 
         &.plus {
+            width: 16px;
+            height: 16px;
             opacity: 1;
         }
 
         &.minus {
+            width: 16px;
+            height: 2px;
             opacity: 0;
         }
     }
@@ -1542,7 +1577,7 @@ h3 {
             margin-right: 38px;
         }
 
-        @media ($bp-larger-than-note) {
+        @media ($bp-larger-than-desktopfullhd) {
             width: 100%;
         }
 
@@ -1816,7 +1851,7 @@ h3 {
         }
 
         @media ($bp-larger-than-desktop) {
-            justify-content: space-between;
+            //justify-content: space-between;
             gap: 56px 32px;
         }
     }
@@ -1883,6 +1918,10 @@ h3 {
         }
     }
 
+    .btn-more {
+        width: 158px;
+    }
+
 }
 
 .advice {
@@ -1925,11 +1964,15 @@ h3 {
     line-height: 26px;
     color: #000000;
     display: block;
+    transform: translateY(0);
+    transition: $anim;
 
     &:hover {
         cursor: pointer;
         text-decoration: none;
         color: #000000;
+        transform: translateY(-3px);
+        box-shadow: 0px 10px 15px rgba(189, 184, 184, 0.35);
     }
 
     &__wrapper {
@@ -1973,4 +2016,32 @@ h3 {
             width: 33.33%;
         }
     }
+}
+
+.pagination {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin: 0 15px;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+}
+
+#jGrowl {
+    z-index: 99999;
+}
+
+.ajax_form .error {
+    border: 1px solid red !important;
 }
